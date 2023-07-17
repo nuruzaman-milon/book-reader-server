@@ -26,7 +26,7 @@ const getAllBooks = async (req, res) => {
 };
 const getAllBooksDesc = async (req, res) => {
   try {
-    const books = await BookModel.find().sort({ created_at: -1 }).limit(3);
+    const books = await BookModel.find({}).sort({ createdAt: -1 }).limit(10);
 
     if (!books) {
       return errorResponse(res, 404, "books not found");
