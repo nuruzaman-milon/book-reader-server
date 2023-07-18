@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
-const bookRouter = require("./routes/bookRoutes");
+const bookRouter = require("./src/routes/bookRoutes");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
