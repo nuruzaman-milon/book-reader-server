@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/books", bookRouter);
 
+
+app.get("/api/v1/test", (req, res) => {
+  res.status(200).send("running correctly testing passed");
+});
 app.get("/", (req, res) => {
   res.status(200).send("running correctly");
 });
