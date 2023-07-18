@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
-const bookRouter = require("../routes/bookRoutes");
+const bookRouter = require("./routes/bookRoutes");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
