@@ -18,7 +18,7 @@ app.get("/api/v1/test", (req, res) => {
   res.status(200).send("running correctly testing passed");
 });
 app.get("/", (req, res) => {
-  res.status(200).send("working api correctly");
+  res.status(200).send("working api correctly fine");
 });
 
 const port = process.env.SERVER_PORT || 5001;
