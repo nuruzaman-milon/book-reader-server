@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/books", bookRouter);
 
-
 app.get("/api/v1/test", (req, res) => {
   res.status(200).send("running correctly testing passed");
 });
@@ -24,8 +23,7 @@ app.get("/", (req, res) => {
 
 const port = process.env.SERVER_PORT || 5001;
 
-const connectDb =
-  process.env.MONGODB_URL || "mongodb://localhost:27017/book-reader-server";
+const connectDb = process.env.MONGODB_ATLAS_URL;
 
 const connectDataBase = async (options = {}) => {
   try {
