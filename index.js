@@ -1,14 +1,14 @@
 const express = require("express");
-const morgan = require("morgan");
 const bookRouter = require("./src/routes/bookRoutes");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const cors = require('cors')
 
 dotenv.config();
 
 const app = express();
 
-// app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
