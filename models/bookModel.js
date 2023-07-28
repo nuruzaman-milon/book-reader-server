@@ -6,7 +6,6 @@ const bookSchema = new Schema(
     title: {
       type: String,
       required: [true, "title is missing"], //boolean, message
-      trim: true, //trim empty space
     },
     author: {
       type: String,
@@ -18,7 +17,7 @@ const bookSchema = new Schema(
     },
     publication: {
       type: Date,
-      required: [true, "publication is required"],
+      // required: [true, "publication is required"],
     },
   },
   { timestamps: true }

@@ -54,6 +54,7 @@ const getSingleBook = async (req, res) => {
 
 const ceateNewBook = async (req, res) => {
   try {
+    console.log("data from body",req.body);
     const createBook = await BookModel.create(req.body);
 
     if (createBook) {

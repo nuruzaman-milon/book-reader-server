@@ -8,24 +8,20 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:5000",
-//       "https://book-reader-server.vercel.app"
-//     ],
-//     credentials: true,
-//   })
-// )
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use("/api/v1/books", bookRouter);
 
-app.get("/api/v1/test", (req, res) => {
-  res.status(200).send("running correctly testing passed");
-});
 app.get("/", (req, res) => {
   res.status(200).send("working api correctly fine");
 });
